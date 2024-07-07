@@ -12,6 +12,11 @@ import { MdOutlineWbSunny } from "react-icons/md";
 import { AiFillMoon } from "react-icons/ai";
 import { FaGithub, FaGoogle } from "react-icons/fa";
 import SignInForm from "@/components/forms/SignInForm";
+import {
+  SetDarkThemeMoon,
+  SetLightThemeSun,
+  ThemeModeToggle,
+} from "@/components/ThemeModeToggle";
 
 export default function Component() {
   return (
@@ -48,14 +53,7 @@ export default function Component() {
         </div>
       </div>
       <div className="absolute top-4 right-4 flex items-center gap-2">
-        <Button variant="ghost" size="icon" className="rounded-full">
-          <MdOutlineWbSunny className="h-6 w-6" />
-          <span className="sr-only">Toggle theme</span>
-        </Button>
-        <Button variant="ghost" size="icon" className="rounded-full">
-          <AiFillMoon className="h-6 w-6" />
-          <span className="sr-only">Toggle theme</span>
-        </Button>
+        <ThemeModeToggle />
       </div>
     </div>
   );

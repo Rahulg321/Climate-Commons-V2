@@ -9,6 +9,11 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import RegisterForm from "@/components/forms/RegisterForm";
+import {
+  SetDarkThemeMoon,
+  SetLightThemeSun,
+  ThemeModeToggle,
+} from "@/components/ThemeModeToggle";
 
 export default function RegisterPage() {
   return (
@@ -40,6 +45,9 @@ export default function RegisterPage() {
           </div>
           <RegisterForm />
         </div>
+      </div>
+      <div className="absolute top-4 right-4 flex items-center gap-2">
+        <ThemeModeToggle />
       </div>
     </div>
   );
